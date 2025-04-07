@@ -11,6 +11,8 @@ return {
         -- Typescript and JavaScript
         null_ls.builtins.formatting.prettier,
         null_ls.builtins.diagnostics.semgrep,
+        -- PHP
+        null_ls.builtins.formatting.phpcsfixer,
       },
     })
     vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
