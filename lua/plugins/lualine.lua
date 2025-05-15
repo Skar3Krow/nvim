@@ -24,13 +24,9 @@ return {
       },
       sections = {
         lualine_a = { "mode" },
-        lualine_b = { "branch", "diff", "diagnostics" },
-        lualine_c = { "filename" },
-        lualine_x = {
-          "lsp_status",
-          "filetype",
-          "filesize",
-        },
+        lualine_b = { "branch", "diff" },
+        lualine_c = { "buffers" },
+        lualine_x = { "encoding" },
         lualine_y = { "location" },
         lualine_z = {
           function()

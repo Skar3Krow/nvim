@@ -12,6 +12,16 @@ vim.opt.listchars:append("trail:·")
 -- vim.opt.listchars:append("tab:▏ ")
 -- vim.opt.listchars:append("nbsp:␣")
 
+vim.diagnostic.config({
+  virtual_text = false,
+  virtual_lines = { current_line = true },
+  float = {
+    border = "rounded",
+  },
+  underline = true,
+  update_in_insert = false,
+})
+
 vim.opt.swapfile = false
 vim.opt.fillchars = { eob = " " }
 
