@@ -3,6 +3,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     require("lualine").setup({
+      inverse = false,
       options = {
         icons_enabled = true,
         theme = "gruvbox",
@@ -40,7 +41,11 @@ return {
         lualine_c = { "filename" },
         lualine_x = { "location" },
         lualine_y = {},
-        lualine_z = { "ctime" },
+        lualine_z = {
+          function()
+            return " " .. os.date("%H:%M %a")
+          end,
+        },
       },
       tabline = {},
       winbar = {},
