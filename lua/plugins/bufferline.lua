@@ -43,10 +43,13 @@ return {
             return result
           end,
         },
+        buffer_pin_command = "BufferPin",
+        buffer_unpin_command = "BufferUnpin",
       },
-      vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" }),
+      vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete current buffer" }),
       vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" }),
       vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Previous buffer" }),
+      vim.keymap.set("n", "<leader>bp", "<cmd>BufferLineTogglePin<CR>", { desc = "Toggle Pinning Buffer" }),
     })
   end,
 }
